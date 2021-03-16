@@ -1,19 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Assessment" representedClassName="Assessment" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="assessmentToGrades" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AssessmentGrade" inverseName="newRelationship" inverseEntity="AssessmentGrade"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CourseData" inverseName="newRelationship" inverseEntity="CourseData"/>
+    </entity>
+    <entity name="AssessmentGrade" representedClassName="AssessmentGrade" syncable="YES" codeGenerationType="class">
+        <attribute name="grade" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="assessmentsToStudents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StudentData" inverseName="studentsToAssessments" inverseEntity="StudentData"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Assessment" inverseName="assessmentToGrades" inverseEntity="Assessment"/>
+    </entity>
     <entity name="CourseData" representedClassName="CourseData" syncable="YES" codeGenerationType="class">
         <attribute name="courseName" optional="YES" attributeType="String"/>
         <attribute name="courseSemester" optional="YES" attributeType="String"/>
         <attribute name="courseYear" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="section" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Assessment" inverseName="newRelationship" inverseEntity="Assessment"/>
+        <relationship name="studentsList" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="StudentData" inverseName="newRelationship" inverseEntity="StudentData"/>
     </entity>
     <entity name="StudentData" representedClassName="StudentData" syncable="YES" codeGenerationType="class">
         <attribute name="grade" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="section" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CourseData" inverseName="studentsList" inverseEntity="CourseData"/>
+        <relationship name="studentsToAssessments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AssessmentGrade" inverseName="assessmentsToStudents" inverseEntity="AssessmentGrade"/>
     </entity>
     <elements>
-        <element name="CourseData" positionX="-63" positionY="-18" width="128" height="28"/>
-        <element name="StudentData" positionX="-45" positionY="-9" width="128" height="103"/>
+        <element name="CourseData" positionX="-94.796875" positionY="32.94921875" width="128" height="133"/>
+        <element name="StudentData" positionX="360.34375" positionY="4.87109375" width="128" height="133"/>
+        <element name="Assessment" positionX="107.83984375" positionY="-253.89453125" width="128" height="88"/>
+        <element name="AssessmentGrade" positionX="366.9921875" positionY="-276.8671875" width="128" height="88"/>
     </elements>
 </model>

@@ -16,10 +16,6 @@
 		CA669FD525F9073A00008CA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA669FD325F9073A00008CA1 /* LaunchScreen.storyboard */; };
 		CA669FE025F9073A00008CA1 /* classroom_tracker_v3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA669FDF25F9073A00008CA1 /* classroom_tracker_v3Tests.swift */; };
 		CA669FEB25F9073A00008CA1 /* classroom_tracker_v3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA669FEA25F9073A00008CA1 /* classroom_tracker_v3UITests.swift */; };
-		CA66A01625F90C4000008CA1 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66A01025F90C4000008CA1 /* Course.swift */; };
-		CA66A01825F90C4000008CA1 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66A01225F90C4000008CA1 /* Student.swift */; };
-		CA66A02925F90CA100008CA1 /* StudentCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66A02825F90CA100008CA1 /* StudentCollection.swift */; };
-		CA66A02E25F9122700008CA1 /* SpecialBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66A02D25F9122700008CA1 /* SpecialBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,10 +51,6 @@
 		CA669FE625F9073A00008CA1 /* classroom-tracker-v3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "classroom-tracker-v3UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA669FEA25F9073A00008CA1 /* classroom_tracker_v3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classroom_tracker_v3UITests.swift; sourceTree = "<group>"; };
 		CA669FEC25F9073A00008CA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA66A01025F90C4000008CA1 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
-		CA66A01225F90C4000008CA1 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
-		CA66A02825F90CA100008CA1 /* StudentCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCollection.swift; sourceTree = "<group>"; };
-		CA66A02D25F9122700008CA1 /* SpecialBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +101,7 @@
 		CA669FC425F9073A00008CA1 /* classroom-tracker-v3 */ = {
 			isa = PBXGroup;
 			children = (
-				CA66A00C25F90C4000008CA1 /* Model */,
 				CA669FC525F9073A00008CA1 /* AppDelegate.swift */,
-				CA66A02D25F9122700008CA1 /* SpecialBar.swift */,
 				CA669FC725F9073A00008CA1 /* SceneDelegate.swift */,
 				CA669FC925F9073A00008CA1 /* CoursesViewController.swift */,
 				CA669FCB25F9073A00008CA1 /* Main.storyboard */,
@@ -139,16 +129,6 @@
 				CA669FEC25F9073A00008CA1 /* Info.plist */,
 			);
 			path = "classroom-tracker-v3UITests";
-			sourceTree = "<group>";
-		};
-		CA66A00C25F90C4000008CA1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CA66A01025F90C4000008CA1 /* Course.swift */,
-				CA66A01225F90C4000008CA1 /* Student.swift */,
-				CA66A02825F90CA100008CA1 /* StudentCollection.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,12 +261,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA66A01625F90C4000008CA1 /* Course.swift in Sources */,
-				CA66A02E25F9122700008CA1 /* SpecialBar.swift in Sources */,
-				CA66A01825F90C4000008CA1 /* Student.swift in Sources */,
 				CA669FCA25F9073A00008CA1 /* CoursesViewController.swift in Sources */,
 				CA669FD025F9073A00008CA1 /* classroom_tracker_v3.xcdatamodeld in Sources */,
-				CA66A02925F90CA100008CA1 /* StudentCollection.swift in Sources */,
 				CA669FC625F9073A00008CA1 /* AppDelegate.swift in Sources */,
 				CA669FC825F9073A00008CA1 /* SceneDelegate.swift in Sources */,
 			);
